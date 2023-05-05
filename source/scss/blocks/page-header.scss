@@ -297,19 +297,16 @@
     }
     &::before{
       content: "";
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
       position: absolute;
       bottom: 0;
       right: 0;
-      transform: scaleX(0);
-      transform-origin: right center;
-      transition: transform 0.3s ease;
+      transition: width 0.3s ease;
     }
     &:hover:before  {
-      transform: scaleX(1);
-      transform-origin: left center;
+      width: 100%;
       right: auto;
       left: 0;
     }
