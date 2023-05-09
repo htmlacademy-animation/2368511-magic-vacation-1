@@ -160,7 +160,6 @@
 
           <div class="slider__item swiper-slide">
             <h2 class="slider__item-title">
-<<<<<<< HEAD
               <span class="slider__item-title slowly">И</span>
               <span class="slider__item-title slowly">с</span>
               <span class="slider__item-title slowly">то</span>
@@ -169,7 +168,6 @@
               <span class="slider__item-title slowly">я</span>
             </h2>
             <p class="slider__item-text" data-slide="check"> Джеймс Таргет был основателем компании &laquo;Fjord Inc.&raquo;. С&nbsp;1965 года &laquo;Fjord Inc.&raquo; прославилась надёжными и&nbsp;удобными чемоданами и&nbsp;аксессуарами для туристов.</p>
-=======
               <span class="slider__item-title--slowly">И</span>
               <span class="slider__item-title--slowly">с</span>
               <span class="slider__item-title--slowly">то</span>
@@ -544,7 +542,6 @@
   </main>
   <script>
     function nextClass () {
-<<<<<<< HEAD
       const cerrentV =  document.getElementsByClassName('swiper-pagination')[0]
       const result = Number(cerrentV.firstElementChild.textContent) + 1
       const wrapper = document.querySelectorAll('[data-slide="check"]')
@@ -573,14 +570,12 @@
         wrapper[7].classList.add('next')
       }
     }
-=======
       const wrapper = document.getElementsByClassName('slider__item-text')
       for (const text of wrapper) {
         setTimeout(()=> text.classList.toggle('next'))
       }
     }
 
->>>>>>> 8ade527 (Во всех вкладках добавлено плавное появление текста)
   </script>
 </body>
 </html>
