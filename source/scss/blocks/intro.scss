@@ -159,6 +159,21 @@
   }
 }
 
+@keyframes dateLazy  {
+  0% {
+    opacity: 0;
+    transform: translateY(43px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(43px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .intro__date {
   margin: 0 0 0 -0.5rem;
   font-family: $font-alt;
@@ -166,9 +181,63 @@
   font-size: 4.8rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
+  padding-left: 28px;
+  position: relative;
+
+  span:nth-child(8) {
+    left: 269px;
+  }
+  span:last-child {
+    left: 290px;
+  }
+  &--dash{
+    margin: 0 32px;
+    position: relative;
+  }
+  &--dash:before{
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: -3px;
+    content: " ";
+    height: 6px;
+    color: white;
+    width: 27px;
+    background-color: white;
+  }
+  &--separator{
+    margin-left: 82px;
+    margin-right: 9px;
+
+  }
+  &--lazy {
+    position: absolute;
+    margin-left: -24px;
+    z-index: -10000;
+    animation: dateLazy 3s ease-in-out;
+  }
+
+  &--faster {
+    position: absolute;
+    z-index: -10000;
+    animation: dateLazy 2s ease-in-out;
+  }
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
   }
 }
+.intro__date:after {
+  display: block;
+  position: absolute;
+  width: 450px;
+  height: 50px;
+  content: " ";
+  z-index: 1000;
+  left: 0;
+  top: 35px;
+  background-color: #5f458c;
+
+}
+
