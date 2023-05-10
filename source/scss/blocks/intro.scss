@@ -332,3 +332,16 @@
     font-size: 48px;
   }
 }
+.intro__date:after {
+  display: block;
+  position: absolute;
+  width: 450px;
+  height: 50px;
+  content: " ";
+  z-index: 1000;
+  left: 0;
+  top: 35px;
+  background-color: #5f458c;
+
+}
+
