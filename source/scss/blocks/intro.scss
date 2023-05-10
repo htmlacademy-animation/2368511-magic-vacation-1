@@ -348,6 +348,27 @@
   left: 0;
   top: 35px;
   background-color: #5f458c;
-
+}
+.intro__title:after {
+  display: block;
+  position: absolute;
+  width: 1050px;
+  height: 110px;
+  content: " ";
+  z-index: 1000;
+  left: -19px;
+  top: 91px;
+  background-color: #5f458c;
+}
+.intro__title:before {
+  display: block;
+  position: absolute;
+  width: 600px;
+  height: 110px;
+  content: " ";
+  z-index: 3000;
+  left: -19px;
+  top: 195px;
+  background-color: #5f458c;
 }
 
