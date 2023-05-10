@@ -1,0 +1,16 @@
+
+@keyframes text {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+
+@mixin slow-text-show {
+  animation: text 1.5s ease-in-out;
+}
