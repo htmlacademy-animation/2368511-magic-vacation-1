@@ -1,4 +1,3 @@
-@import "mexins";
 .intro {
   display: flex;
   flex-direction: column;
@@ -49,17 +48,14 @@
   align-items: self-end;
   overflow: hidden;
 }
-
 .intro__title {
   margin: 0;
-  max-width: 99rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
   font-size: 12rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
-
   position: relative;
   overflow: hidden;
   &-up {
@@ -96,10 +92,6 @@
       z-index: -10000;
       animation: titleSlow 1.5s ease;
     }
-  &--slowly {
-    height: 0;
-    position: absolute;
-    margin-left: -24px;
   }
   &-down {
     margin-top: 10px;
