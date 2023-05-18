@@ -350,3 +350,21 @@
     width: 100%;
   }
 }
+
+.page-header__social {
+  margin-left: 4.8rem;
+
+  @media (min-width: $stop-scaling) {
+    margin-left: 48px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
