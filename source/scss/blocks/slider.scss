@@ -88,6 +88,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  transition: animation ease 20s;
+  animation: lazyTitle ease 3s;
 
   span:nth-child(1) {
     display: block;
