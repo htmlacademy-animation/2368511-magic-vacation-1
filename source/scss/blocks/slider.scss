@@ -67,17 +67,14 @@
 @keyframes lazyTitle  {
   0% {
     opacity: 0;
-    transform: translateY(43px);
-  }
-  50% {
-    opacity: 0;
-    transform: translateY(43px);
+    transform: translateY(108px);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
   }
 }
+
 .slider__item-title {
   margin: 0 0 0 -5.5rem;
   text-transform: uppercase;
@@ -85,44 +82,40 @@
   font-weight: 400;
   font-size: 4.8rem;
   line-height: 0.906;
-  letter-spacing: -0.04em;
-  margin-bottom: 10px;
-  &--slowly {
-    height: 0;
-    position: absolute;
-  }
+  letter-spacing: -0.09em;
+  overflow: hidden;
+  height: 44px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
   span:nth-child(1) {
-    z-index: -10000;
-    animation: lazyTitle 2.8s ease-in-out;
+    display: block;
+    animation: lazyTitle 2.4s ease-in-out;
   }
   span:nth-child(2) {
-    left: 71px;
-    z-index: -10000;
+    display: block;
     animation: lazyTitle 2s ease;
   }
   span:nth-child(3) {
-    left: 120px;
-    z-index: -10000;
-    animation: lazyTitle 2.8s ease-in-out;
+    display: block;
+    animation: lazyTitle 2.3s ease-in-out;
   }
   span:nth-child(4) {
-    left: 193px;
-    z-index: -10000;
+    display: block;
     animation: lazyTitle 2s ease;
   }
   span:nth-child(5) {
-    left: 224px;
-    z-index: -10000;
-    animation: lazyTitle 2.8s ease-in-out;
+    display: block;
+    animation: lazyTitle 2.3s ease-in-out;
   }
   span:nth-child(6) {
-    left: 255px;
-    z-index: -10000;
-    animation: lazyTitle 2.8s ease-in-out;
+    display: block;
+    animation: lazyTitle 2.3s ease-in-out;
   }
 
   @media (min-width: $stop-scaling) {
-    margin-left: -55px;
+    margin-left: 0;
     font-size: 48px;
   }
 
@@ -136,17 +129,7 @@
     font-size: 3rem;
   }
 }
-.slider__item-title:after {
-  display: block;
-  position: absolute;
-  width: 223px;
-  height: 50px;
-  content: " ";
-  z-index: -1000;
-  left: 28px;
-  top: 181px;
-  background-color: #9273D1;
-}
+
 @keyframes lazyText {
   0% {
     opacity: 0;
@@ -161,16 +144,25 @@
     transform: translateX(0px);
   }
 }
+.next {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes shown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .slider__item-text {
   margin-top: 3.6rem;
   margin-bottom: 0;
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
-  opacity: 0;
   transform: translateX(20px);
   transition: all 3s ease;
-  //animation: lazyText 15s ease 1s;
+  animation: shown 3s ease;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -354,4 +346,8 @@
 .next {
     opacity: 1;
     transform: translateY(0);
+}
+.next-2 {
+  opacity: 1;
+  transform: translateY(0);
 }
