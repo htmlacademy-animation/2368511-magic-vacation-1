@@ -10,6 +10,12 @@
   line-height: 3rem;
   color: $c-dark;
   letter-spacing: -0.04em;
+  transform-origin: right center;
+  opacity: 0;
+  animation-name: soft-wider, show-text;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2600ms;
 
   @media (min-width: $stop-scaling) {
     padding: 15px 29px;
@@ -37,7 +43,12 @@
     border: 2px solid $c-light;
     border-radius: 3.5rem;
     z-index: -1;
+    //transform-origin: right center;
+    //transform: translate(-50%, -50%);
+    //animation-name: soft-wider;
+    //animation-duration: 3s;
   }
+
 
   &:hover {
     color: $c-purple;
@@ -65,4 +76,20 @@
       border-color: $c-purple;
     }
   }
+}
+@keyframes soft-wider {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes show-text {
+  to {
+    font-size: 2.4rem;
+  }
+
 }
