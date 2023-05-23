@@ -1,3 +1,4 @@
+@import "mexins";
 .intro {
   display: flex;
   flex-direction: column;
@@ -22,19 +23,103 @@
     padding: 16vh 0 5vh;
   }
 }
-
+@keyframes titleSlow  {
+  0% {
+    opacity: 0;
+    transform: translateY(108px);
+    color: transparent;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    color: white;
+  }
+}
+.slowly {
+  height: 92px;
+  position: absolute;
+  margin-left: -24px;
+  overflow: hidden;
+}
+.custom {
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: self-end;
+  overflow: hidden;
+}
 .intro__title {
   margin: 0;
-  max-width: 99rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
   font-size: 12rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
+  position: relative;
+  overflow: hidden;
+  &-up {
+
+    span:nth-child(1) {
+      z-index: -10000;
+      animation: titleSlow 2.8s ease-in-out;
+    }
+    span:nth-child(2) {
+      z-index: -10000;
+      animation: titleSlow 2s ease;
+    }
+    span:nth-child(3) {
+      z-index: -10000;
+      animation: titleSlow 2.8s ease-in-out;
+    }
+    span:nth-child(4) {
+      z-index: -10000;
+      animation: titleSlow 2s ease;
+    }
+    span:nth-child(5) {
+      z-index: -10000;
+      animation: titleSlow 2.8s ease-in-out;
+    }
+    span:nth-child(6) {
+      z-index: -10000;
+      animation: titleSlow 2s ease;
+    }
+    span:nth-child(7) {
+      z-index: -10000;
+      animation: titleSlow 3.2s ease-in-out;
+    }
+    span:nth-child(8) {
+      z-index: -10000;
+      animation: titleSlow 1.5s ease;
+    }
+  }
+  &-down {
+    margin-top: 10px;
+    span:nth-child(1) {
+      animation: titleSlow 1.5s ease;
+      z-index: 2000;
+    }
+    span:nth-child(2) {
+      z-index: 2000;
+      animation: titleSlow 3.2s ease;
+    }
+    span:nth-child(3) {
+      z-index: 2000;
+      animation: titleSlow 1.5s ease;
+    }
+    span:nth-child(4) {
+      z-index: 2000;
+      animation: titleSlow 3.2s ease;
+    }
+    span:nth-child(5) {
+      z-index: 2000;
+      animation: titleSlow 1.5s ease;
+    }
+  }
 
   @media (min-width: $stop-scaling) {
-    max-width: 990px;
+    //max-width: 990px;
     font-size: 120px;
   }
 
@@ -93,6 +178,7 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  @include slow-text-show;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -134,20 +220,50 @@
     }
   }
 }
-
+@keyframes softAppearance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .intro__label {
   margin: 0 0 1.6rem;
   max-width: 25rem;
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
-
+  position: relative;
+  span {
+    top: -48px;
+    position: absolute;
+    animation: softAppearance 2s ease-out;
+  }
   @media (min-width: $stop-scaling) {
     margin: 0 0 16px;
     width: 250px;
     font-size: 24px;
   }
 }
+
+@keyframes dateLazy  {
+  0% {
+    opacity: 0;
+    transform: translateY(43px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(43px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 
 .intro__date {
   margin: 0 0 0 -0.5rem;
@@ -156,6 +272,51 @@
   font-size: 4.8rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
+  padding-left: 28px;
+  position: relative;
+  overflow: hidden;
+
+  span:nth-child(8) {
+    left: 269px;
+  }
+  span:last-child {
+    left: 290px;
+  }
+  &--dash{
+    margin: 0 32px;
+    position: relative;
+    z-index: -10000;
+    animation: softAppearance 2.4s ease-in-out;
+  }
+  &--dash:before{
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: -3px;
+    content: " ";
+    height: 6px;
+    color: white;
+    width: 27px;
+    background-color: white;
+  }
+  &--separator{
+    margin-left: 82px;
+    margin-right: 9px;
+    z-index: -10000;
+    animation: softAppearance 2s cubic-bezier(.86,-0.56,.3,.67);
+  }
+  &--lazy {
+    position: absolute;
+    margin-left: -24px;
+    z-index: -10000;
+    animation: dateLazy 3s ease-in-out;
+  }
+
+  &--faster {
+    position: absolute;
+    z-index: -10000;
+    animation: dateLazy 2s ease-in-out;
+  }
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;

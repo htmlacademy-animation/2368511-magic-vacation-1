@@ -54,6 +54,7 @@
     }
   }
 
+
   &:focus {
     color: $c-purple;
     outline: none;
@@ -140,6 +141,10 @@
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+    .social-block__link {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 
   li {
@@ -205,12 +210,13 @@
   svg {
     @include center;
   }
-
   &--fb {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.6s cubic-bezier(.37,-0.21,1,1);
     svg {
       width: 0.8rem;
       height: 1.7rem;
-
       @media (min-width: $stop-scaling) {
         width: 8px;
         height: 17px;
@@ -219,6 +225,9 @@
   }
 
   &--insta {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.8s cubic-bezier(.37,-0.21,.3,1);
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -231,6 +240,9 @@
   }
 
   &--vk {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 1s cubic-bezier(.37,-0.21,1,1);
     svg {
       width: 1.7rem;
       height: 1rem;
