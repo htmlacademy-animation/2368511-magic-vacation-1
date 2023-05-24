@@ -25,16 +25,7 @@
   align-items: center;
   justify-content: space-between;
 }
-@keyframes logo {
-  0% {
-    transform: translateX(-20px);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity:1;
-  }
-}
+
 
 .page-header__logo {
   @include hover;
@@ -45,7 +36,7 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
-  animation: logo 1s ease;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -137,20 +128,11 @@
     }
   }
 }
-@keyframes nav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 .page-header__nav {
   display: flex;
   align-items: center;
-
-  animation: nav 1s ease;
-  //transition: opacity 5s ease;
+  opacity: 0;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
