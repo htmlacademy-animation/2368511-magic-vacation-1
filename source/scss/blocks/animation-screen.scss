@@ -120,6 +120,12 @@
     animation: 2000ms titleSlow 1100ms linear forwards;
   }
 }
+.anim-symbols {
+  animation: titleSlow  ease-out forwards;
+  animation-duration: var(--dur);
+  animation-delay:  var(--delay);
+  overflow: hidden;
+}
 .farther-symbols {
   animation: 2000ms titleSlow  250ms linear forwards;
   overflow: hidden;
