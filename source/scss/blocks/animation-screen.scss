@@ -106,45 +106,11 @@
   }
 
 }
-.second {
-  .farther-symbols {
-    animation: 2000ms titleSlow  1350ms linear forwards;
-  }
-  .closer-symbols {
-    animation: 2000ms titleSlow 1600ms ease-in forwards;
-  }
-  .extra-symbols {
-    animation: 2000ms titleSlow  1450ms ease-out forwards;
-  }
-  .middle-symbols {
-    animation: 2000ms titleSlow 1100ms linear forwards;
-  }
-}
 .anim-symbols {
   animation: titleSlow  ease-out forwards;
   animation-duration: var(--dur);
   animation-delay:  var(--delay);
   overflow: hidden;
-}
-.farther-symbols {
-  animation: 2000ms titleSlow  250ms linear forwards;
-  overflow: hidden;
-}
-.closer-symbols {
-  animation: 2000ms titleSlow 500ms ease-in forwards;
-  overflow: hidden;
-}
-.extra-symbols {
-  animation: 2000ms titleSlow  350ms ease-out forwards;
-  overflow: hidden;
-}
-.middle-symbols {
-  animation: 2000ms titleSlow linear forwards;
-  overflow: hidden;
-}
-.space{
-  width: 100px;
-  margin-left: 100%;
 }
 
 @keyframes titleSlow  {
