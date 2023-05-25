@@ -64,16 +64,6 @@
     }
   }
 }
-@keyframes lazyTitle  {
-  0% {
-    opacity: 0;
-    transform: translateY(108px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
 .slider__item-title {
   margin: 0 0 0 -5.5rem;
@@ -84,37 +74,7 @@
   line-height: 0.906;
   letter-spacing: -0.09em;
   overflow: hidden;
-  height: 44px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  transition: animation ease 20s;
-  animation: lazyTitle ease 3s;
-
-  span:nth-child(1) {
-    display: block;
-    animation: lazyTitle 2.4s ease-in-out;
-  }
-  span:nth-child(2) {
-    display: block;
-    animation: lazyTitle 2s ease;
-  }
-  span:nth-child(3) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
-  span:nth-child(4) {
-    display: block;
-    animation: lazyTitle 2s ease;
-  }
-  span:nth-child(5) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
-  span:nth-child(6) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 0;

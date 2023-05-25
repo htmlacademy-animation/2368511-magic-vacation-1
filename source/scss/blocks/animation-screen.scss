@@ -100,25 +100,40 @@
   overflow: hidden;
   z-index: -10000;
   max-width: 993px;
+  color: transparent;
   @media (min-width: 2000px) {
     max-width: 1000px;
   }
 
 }
+.second {
+  .farther-symbols {
+    animation: 2000ms titleSlow  1350ms linear forwards;
+  }
+  .closer-symbols {
+    animation: 2000ms titleSlow 1600ms ease-in forwards;
+  }
+  .extra-symbols {
+    animation: 2000ms titleSlow  1450ms ease-out forwards;
+  }
+  .middle-symbols {
+    animation: 2000ms titleSlow 1100ms linear forwards;
+  }
+}
 .farther-symbols {
-  animation: 2000ms titleSlow  250ms linear;
+  animation: 2000ms titleSlow  250ms linear forwards;
   overflow: hidden;
 }
 .closer-symbols {
-  animation: 2000ms titleSlow 500ms ease-in;
+  animation: 2000ms titleSlow 500ms ease-in forwards;
   overflow: hidden;
 }
 .extra-symbols {
-  animation: 2000ms titleSlow  350ms ease-out;
+  animation: 2000ms titleSlow  350ms ease-out forwards;
   overflow: hidden;
 }
 .middle-symbols {
-  animation: 2000ms titleSlow linear;
+  animation: 2000ms titleSlow linear forwards;
   overflow: hidden;
 }
 .space{
