@@ -7,7 +7,7 @@
   font-family: $font-alt;
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 2rem;
+  line-height: 3rem;
   color: $c-dark;
   letter-spacing: -0.04em;
 
@@ -81,35 +81,30 @@
   30% {
     opacity: 1;
     transform: scaleX(1);
-    transform-origin: left;
+
   }
-  65%{
+  99%{
     opacity: 1;
     transform: scaleX(1);
-    transform-origin: left;
+
   }
   100% {
     font-size: 2.4rem;
     opacity: 1;
     transform: scaleX(1);
-    transform-origin: left;
-  }
+    transition-timing-function: ease-out;
 
-}
-@keyframes show-text {
-  to {
-    font-size: 2.4rem;
   }
 
 }
 .go {
-  //transform-origin: right center;
   min-width: 272px;
   opacity: 0;
-  font-size: 0;
+  font-size: 2.4rem;
   transform: scaleX(0);
   animation-name: soft-wider;
   animation-fill-mode: forwards;
   animation-duration: 2s;
   animation-delay: 2600ms;
+  transform-origin: left;
 }
