@@ -22,6 +22,41 @@
     }
   }
 }
+.anim-logo {
+  animation: logo 1s ease forwards;
+}
+@keyframes logo {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity:1;
+  }
+}
+
+.anim-footer {
+  animation: 1s footer 100ms ease forwards;
+}
+@keyframes footer {
+  from {
+    transform: translateY(30px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.anim-nav {
+  animation: 1s nav 150ms ease forwards;
+}
+@keyframes nav {
+  to {
+    opacity: 1;
+  }
+}
 
 .fill-fon::after {
   display: block;
