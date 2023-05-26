@@ -10,12 +10,7 @@
   line-height: 3rem;
   color: $c-dark;
   letter-spacing: -0.04em;
-  transform-origin: right center;
-  opacity: 0;
-  animation-name: soft-wider, show-text;
-  animation-fill-mode: forwards;
-  animation-duration: 2s;
-  animation-delay: 2600ms;
+
 
   @media (min-width: $stop-scaling) {
     padding: 15px 29px;
@@ -78,18 +73,38 @@
   }
 }
 @keyframes soft-wider {
-  from {
+  0% {
     opacity: 0;
     transform: scaleX(0);
+    transform-origin: right
   }
-  to {
+  30% {
     opacity: 1;
     transform: scaleX(1);
+
   }
-}
-@keyframes show-text {
-  to {
+  99%{
+    opacity: 1;
+    transform: scaleX(1);
+
+  }
+  100% {
     font-size: 2.4rem;
+    opacity: 1;
+    transform: scaleX(1);
+    transition-timing-function: ease-out;
+
   }
 
+}
+.go {
+  min-width: 272px;
+  opacity: 0;
+  font-size: 2.4rem;
+  transform: scaleX(0);
+  animation-name: soft-wider;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2600ms;
+  transform-origin: left;
 }
