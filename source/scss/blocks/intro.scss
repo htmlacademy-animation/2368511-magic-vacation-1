@@ -1,4 +1,3 @@
-@import "mexins";
 .intro {
   display: flex;
   flex-direction: column;
@@ -178,7 +177,7 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
-  @include slow-text-show;
+  animation: text 1.5s ease-in-out;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
