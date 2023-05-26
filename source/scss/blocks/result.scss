@@ -86,7 +86,7 @@
 }
 .right-leaf {
   right: 232px;
-  top: 5px;
+  top: 31px;
   transform-origin: left bottom;
   transform: rotate(-1deg);
   animation: right-leaf 6s ease forwards;
@@ -100,6 +100,80 @@
   animation: left-leaf 6s ease forwards;
   animation-delay: 1180ms;
 
+}
+.green-leaf {
+  right: 179px;
+  top: 162px;
+  transform-origin: left bottom;
+  transform: rotate(-1deg);
+  animation: green-leaf 6s ease forwards;
+  animation-delay: 1180ms;
+}
+.flamingo {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  transform-origin: bottom;
+  top: 159px;
+  left: 367px;
+  height: 298px;
+  transform: rotate(-5deg);
+  animation: flamingo 10s ease forwards;
+}
+@keyframes flamingo  {
+  0% {
+    transform: translateY(250px) scale(0.2) rotate(-20deg);
+  }
+  20% {
+    transform: translateY(-10px) rotate(-10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(8px) rotate(-5deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-8px) rotate(-8deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes green-leaf {
+  0% {
+    transform: rotate(-8deg);
+  }
+  15% {
+    transform: rotate(17deg);
+
+  }
+  35% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(4deg);
+    opacity: 1;
+    transition-timing-function: ease-in;
+  }
+  65% {
+    transform: rotate(-3deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(3deg);
+    transition-timing-function: ease-in;
+  }
+  100% {
+    transform: rotate(-1deg);
+    opacity: 1;
+    transition-timing-function: ease-out;
+  }
 }
 @keyframes right-leaf {
   0% {
