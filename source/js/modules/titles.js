@@ -7,7 +7,7 @@ export default () => {
     });
   }
   function changeTitle(elems) {
-    const elem = elems.firstElementChild.textContent;
+    const elem = elems.textContent;
     const blocks = elem.trim().split(` `);
     let results = [];
     blocks.forEach((block)=> {
@@ -20,12 +20,12 @@ export default () => {
       });
       results[results.length] = result.join(``);
     });
-    elems.firstElementChild.textContent = ` `;
+    elems.textContent = ` `;
     results.forEach((item, count)=> {
       if (count === 1) {
-        elems.firstElementChild.innerHTML += `<span class="symbol-effect second">${item}<span/>`;
+        elems.innerHTML += `<span class="symbol-effect second">${item}<span/>`;
       } else {
-        elems.firstElementChild.innerHTML += `<span class="symbol-effect">${item}<span/>`;
+        elems.innerHTML += `<span class="symbol-effect">${item}<span/>`;
       }
     });
   }
