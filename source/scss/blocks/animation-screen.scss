@@ -89,3 +89,89 @@
     transform-origin: top;
   }
 }
+.history-sliders-color-two {
+  .page-header__menu{
+    a:hover {
+      color: $c-blue;
+    }
+  }
+  .social-block__toggler{
+    svg {
+      color: $c-blue;
+    }
+    &:hover,
+    .social-block--active & {
+      color: $c-blue;
+    }
+    &:active:focus {
+      color: $c-blue;
+    }
+  }
+  .social-block__link{
+    &:hover {
+      color: $c-blue;
+    }
+  }
+}
+.history-sliders-color-three{
+  .page-header__menu{
+    a:hover {
+      color: $c-light-blue;
+    }
+  }
+  .social-block__toggler{
+    svg {
+      color: $c-light-blue;
+    }
+    &:hover,
+    .social-block--active & {
+      color: $c-light-blue;
+    }
+    &:active:focus {
+      color: $c-light-blue;
+    }
+  }
+  .social-block__link{
+    &:hover {
+      color: $c-light-blue;
+    }
+  }
+}
+.history-sliders-color-four{
+  .page-header__menu{
+    a:hover {
+      color: $c-dark;
+    }
+  }
+  .social-block__toggler{
+    svg {
+      color: $c-dark;
+    }
+    &:hover,
+    .social-block--active & {
+      color: $c-dark;
+    }
+    &:active:focus {
+      color: $c-dark;
+    }
+  }
+  .social-block__link{
+    &:hover {
+      color: $c-dark;
+    }
+  }
+}
+//.history-sliders {
+//  .page-header__menu {
+//    a {
+//      &:hover::after {
+//        background-color: green;
+//      }
+//    }
+//  }
+//}
+//1  #5f45
+//2 #5f458c
+//?? - #A07DE4
+//blue - #3D72EE
+// blue light - #90B8E2
