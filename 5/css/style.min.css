@@ -1084,14 +1084,14 @@ img {
 
 @keyframes change {
   from {
-    background-image: url("../../img/fon.png");
+    background-image: url("../img/fon.png");
     background-position: bottom;
     height: 150%;
     transform: translateY(1000px);
     transform-origin: bottom;
   }
   to {
-    background-image: url("../../img/fon.png");
+    background-image: url("../img/fon.png");
     background-position: top;
     height: 100%;
     transform: translateY(0px);
