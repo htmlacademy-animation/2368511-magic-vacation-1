@@ -22,5 +22,6 @@ form();
 social();
 appearance();
 changeFon();
+
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
