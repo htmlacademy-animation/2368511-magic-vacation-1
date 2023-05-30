@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 14.6rem 0 7.7rem;
   width: 100%;
+  transition: all ease-in;
 
   @media (min-width: $stop-scaling) {
     padding: 146px 0 65px;
@@ -22,7 +23,6 @@
     padding: 5rem 0 1.5rem;
   }
 }
-
 .prizes__title {
   margin: 0 0 6rem;
   text-transform: uppercase;

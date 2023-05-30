@@ -11,6 +11,7 @@
   color: $c-dark;
   letter-spacing: -0.04em;
 
+
   @media (min-width: $stop-scaling) {
     padding: 15px 29px;
     font-size: 24px;
@@ -37,7 +38,12 @@
     border: 2px solid $c-light;
     border-radius: 3.5rem;
     z-index: -1;
+    //transform-origin: right center;
+    //transform: translate(-50%, -50%);
+    //animation-name: soft-wider;
+    //animation-duration: 3s;
   }
+
 
   &:hover {
     color: $c-purple;
@@ -65,4 +71,40 @@
       border-color: $c-purple;
     }
   }
+}
+@keyframes soft-wider {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right
+  }
+  30% {
+    opacity: 1;
+    transform: scaleX(1);
+
+  }
+  99%{
+    opacity: 1;
+    transform: scaleX(1);
+
+  }
+  100% {
+    font-size: 2.4rem;
+    opacity: 1;
+    transform: scaleX(1);
+    transition-timing-function: ease-out;
+
+  }
+
+}
+.go {
+  min-width: 272px;
+  opacity: 0;
+  font-size: 2.4rem;
+  transform: scaleX(0);
+  animation-name: soft-wider;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2600ms;
+  transform-origin: left;
 }

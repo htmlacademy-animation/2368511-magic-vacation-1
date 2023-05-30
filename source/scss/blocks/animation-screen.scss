@@ -57,3 +57,35 @@
     opacity: 1;
   }
 }
+
+.fill-fon::after {
+  display: block;
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10000;
+  transition: transform 150ms cubic-bezier(0.1, 0.7, 0.6, 0.9);
+  animation-name: change;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes change {
+  from {
+    background-image: url('../img/fon.png');
+    background-position: bottom;
+    height: 150%;
+    transform: translateY(1000px);
+    transform-origin: bottom;
+  }
+  to {
+    //transform: translateY(100%);
+    background-image: url('../img/fon.png');
+    background-position: top;
+    height: 100%;
+    transform: translateY(0px);
+    transform-origin: top;
+  }
+}
