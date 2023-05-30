@@ -27,7 +27,7 @@
           <li onclick="{nextClass()}">
             <a class="js-menu-link" href="#story" data-href="story">история</a>
           </li>
-          <li onclick="{changeFon(event)}">
+          <li>
             <a class="js-menu-link" href="#prizes" data-href="prizes">призы</a>
           </li>
           <li>
@@ -523,18 +523,6 @@
     }
   }
 </script>
-<script>
-  function changeFon(event) {
-    let link;
-    event.preventDefault()
-    link = document.getElementsByClassName('screen--story')
-    link[0].classList.add('fill-fon')
 
-    setTimeout(function() {
-      window.location.href = ('#prizes')
-      link[0].classList.remove('fill-fon');
-    }, 400)
-  }
-</script>
 <script src="js/script.js"></script></body>
 </html>
