@@ -89,18 +89,20 @@
     margin: 0;
   }
 }
-.airship{
-  width: 268px;
-  height: 240px;
-}
 .prizes__list {
   @include list-reset;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  //display: flex;
+  //justify-content: flex-end;
+  //align-items: flex-end;
+  //flex-direction: row-reverse;
   //margin-top: auto;
-  margin: 15% auto;
+  //margin: 300px 0 0 653px;
+  position: relative;
 
+  margin: 15% 0 15% 20%;
+  @media (max-width: 1750px) {
+    margin: 10% auto;
+  }
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
     align-items: flex-start;
@@ -111,7 +113,7 @@
 }
 
 .prizes__item {
-  margin-left: 7.5rem;
+  //margin-left: 7.5rem;
 
   @media (min-width: $stop-scaling) {
     margin-left: 75px;
@@ -224,10 +226,20 @@
       }
     }
   }
-  &--journeys {
+  &--airship {
+    width: 400px;
+    position: absolute;
+    top: -5%;
+    left: 40%;
 
+    @media (max-width: 1750px) {
+      width: 250px;
+      top: -5%;
+      left: 40%;
+    }
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
+
     }
     .prizes__icon {
       position: relative;

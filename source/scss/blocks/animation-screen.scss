@@ -161,17 +161,84 @@
     }
   }
 }
-//.history-sliders {
-//  .page-header__menu {
-//    a {
-//      &:hover::after {
-//        background-color: green;
-//      }
-//    }
-//  }
-//}
-//1  #5f45
-//2 #5f458c
-//?? - #A07DE4
-//blue - #3D72EE
-// blue light - #90B8E2
+.airship {
+  animation: airship 8s ease-out infinite;
+  transform-origin: center;
+  transform: rotateX(-20deg);
+}
+@keyframes airship {
+  25% {
+    transform: rotateX(20deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  75% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(-20deg);
+  }
+}
+.back-winds {
+  animation: back 8s linear infinite;
+  transform: translateY(5px);
+}
+.front-winds {
+  animation: front 8s linear infinite;
+  transform: translateY(-5px);
+}
+
+@keyframes back {
+  25% {
+    transform:  translateY(-5px);
+  }
+  50% {
+    transform:  translateY(5px);
+  }
+  75% {
+    transform:  translateY(-5px);
+  }
+  100% {
+    transform:  translateY(5px);
+  }
+}
+
+@keyframes front {
+  25% {
+    transform:  translateY(5px);
+  }
+  50% {
+    transform:  translateY(-5px);
+  }
+  75% {
+    transform:  translateY(5px);
+  }
+  100% {
+    transform:  translateY(-5px);
+  }
+}
+#tail{
+  line {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+  }
+  line:nth-child(1) {
+    animation: 200ms tail 50ms linear infinite;
+  }
+  line:nth-child(2) {
+    animation: tail 200ms linear infinite;
+  }
+  line:nth-child(3) {
+    animation: 200ms tail 70ms linear infinite;
+  }
+
+}
+@keyframes tail {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 60%;
+  }
+}
