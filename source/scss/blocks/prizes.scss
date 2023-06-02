@@ -98,10 +98,12 @@
   //margin-top: auto;
   //margin: 300px 0 0 653px;
   position: relative;
+  max-width: 500px;
+  max-height: 500px;
 
-  margin: 15% 0 15% 20%;
+  margin: 15% 0 15% 45%;
   @media (max-width: 1750px) {
-    margin: 10% auto;
+    margin: 8% auto;
   }
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
@@ -231,12 +233,58 @@
     position: absolute;
     top: -5%;
     left: 40%;
-
+    z-index: -1000;
     @media (max-width: 1750px) {
       width: 250px;
       top: -5%;
       left: 40%;
     }
+    @media (max-width: $tablet) and (orientation: portrait) {
+      padding-left: 0.8rem;
+
+    }
+    .prizes__icon {
+      position: relative;
+      left: -5.9rem;
+      bottom: -1.4rem;
+      width: 26.8rem;
+
+      @media (min-width: $stop-scaling) {
+        left: -59px;
+        bottom: -14px;
+        width: 268px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        left: 0;
+        bottom: 0;
+        width: 9.4rem;
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        left: -2rem;
+        width: 13rem;
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        width: 10rem;
+      }
+    }
+
+
+  }
+  &--plane-window {
+    width: 8px;
+    position: absolute;
+    top: 243px;
+    right: 0;
+    z-index: 10000;
+    color: red;
+    //@media (max-width: 1750px) {
+    //  width: 250px;
+    //  top: -5%;
+    //  left: 40%;
+    //}
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
 
