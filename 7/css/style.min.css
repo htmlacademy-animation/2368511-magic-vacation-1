@@ -2962,6 +2962,18 @@ img {
   align-items: center;
   z-index: -1;
 }
+@media (min-width: 1024px) {
+  .result__image {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .result__image {
+    width: 385px;
+    margin: 0 auto;
+  }
+}
 @media (orientation: portrait) {
   .result__image {
     left: -1rem;
@@ -2973,8 +2985,6 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 65%;
   position: relative;
 }
 .result__image img {
@@ -2989,6 +2999,23 @@ img {
   opacity: 0;
   transform: scale(0);
   animation: suitcase 1500ms linear forwards;
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .suitcase {
+    width: 45%;
+  }
+}
+@media (min-width: 1220px) {
+  .suitcase {
+    width: 38%;
+    height: 25%;
+  }
+}
+@media (min-width: 769px) {
+  .suitcase {
+    width: 50%;
+    height: 25%;
+  }
 }
 
 @keyframes suitcase {
@@ -3011,30 +3038,63 @@ img {
 }
 
 .right-leaf {
-  right: 232px;
-  top: 31px;
   transform-origin: left bottom;
   transform: rotate(-1deg);
   animation: right-leaf 6s ease forwards;
   animation-delay: 1180ms;
 }
+@media (min-width: 769px) {
+  .right-leaf {
+    right: 24px;
+    top: 9px;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .right-leaf {
+    right: 28px;
+    top: 9px;
+    width: 35%;
+  }
+}
 
 .left-leaf {
   transform-origin: right top;
-  left: 266px;
-  top: 209px;
   transform: rotate(-5deg);
   animation: left-leaf 6s ease forwards;
   animation-delay: 1180ms;
 }
+@media (min-width: 769px) {
+  .left-leaf {
+    left: 12px;
+    top: 90px;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .left-leaf {
+    left: 31px;
+    top: 55px;
+    width: 35%;
+  }
+}
 
 .green-leaf {
-  right: 179px;
-  top: 162px;
   transform-origin: left bottom;
   transform: rotate(-1deg);
   animation: green-leaf 6s ease forwards;
   animation-delay: 1180ms;
+}
+@media (min-width: 769px) {
+  .green-leaf {
+    right: -23px;
+    top: 132px;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .green-leaf {
+    right: 37px;
+    top: 79px;
+    width: 35%;
+  }
 }
 
 .flamingo {
@@ -3042,11 +3102,24 @@ img {
   z-index: 1000;
   opacity: 0;
   transform-origin: bottom;
-  top: 159px;
-  left: 367px;
   height: 298px;
   transform: rotate(-5deg);
   animation: flamingo 10s ease forwards;
+}
+@media (min-width: 769px) {
+  .flamingo {
+    top: 63px;
+    left: 130px;
+    height: 80%;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .flamingo {
+    top: 34px;
+    left: 93px;
+    width: 35%;
+    height: 85%;
+  }
 }
 
 @keyframes flamingo {
