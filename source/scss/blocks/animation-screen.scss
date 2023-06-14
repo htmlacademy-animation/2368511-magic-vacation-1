@@ -90,9 +90,35 @@
   }
 }
 .history-sliders-color-two {
-  .page-header__menu{
-    a:hover {
+  .slider__control {
+    &:hover {
       color: $c-blue;
+    }
+    &:focus {
+      color: $c-blue;
+      &::before {
+        border-color: $c-blue;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+      &::before {
+        background-color: $c-blue;
+        border-color: $c-blue;
+      }
+    }
+  }
+  .page-header__menu{
+    a {
+      &:hover,
+      &:focus {
+        color: $c-blue;
+        &::after {
+          background-color: $c-blue;
+        }
+      }
     }
   }
   .social-block__toggler{
@@ -114,9 +140,35 @@
   }
 }
 .history-sliders-color-three{
-  .page-header__menu{
-    a:hover {
+  .slider__control {
+    &:hover {
       color: $c-light-blue;
+    }
+    &:focus {
+      color: $c-light-blue;
+      &::before {
+        border-color: $c-light-blue;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+      &::before {
+        background-color: $c-light-blue;
+        border-color: $c-light-blue;
+      }
+    }
+  }
+  .page-header__menu{
+    a {
+      &:hover,
+      &:focus {
+        color: $c-light-blue;
+        &::after {
+          background-color: $c-light-blue;
+        }
+      }
     }
   }
   .social-block__toggler{
@@ -138,9 +190,35 @@
   }
 }
 .history-sliders-color-four{
-  .page-header__menu{
-    a:hover {
+  .slider__control {
+    &:hover {
       color: $c-dark;
+    }
+    &:focus {
+      color: $c-dark;
+      &::before {
+        border-color: $c-dark;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+      &::before {
+        background-color: $c-dark;
+        border-color: $c-dark;
+      }
+    }
+  }
+  .page-header__menu{
+    a {
+      &:hover,
+      &:focus {
+        color: $c-dark;
+        &::after {
+          background-color: $c-dark;
+        }
+      }
     }
   }
   .social-block__toggler{
