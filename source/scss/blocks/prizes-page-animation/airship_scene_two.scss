@@ -1,41 +1,55 @@
 .airship-to {
   transform: translate(14px, 46px) scale(0.1);
-  //animation: 400ms right-window 2800ms linear forwards;
-  animation: right-window 400ms linear forwards;
+  animation: 400ms right-window 2800ms linear forwards;
+  //animation: right-window 400ms linear forwards;
   #clouds-in-window {
     opacity: 0;
     transform: translateX(340px);
-    //animation: 500ms cloud 3000ms linear;
-    animation: cloud 2000ms linear;
+    animation: 1500ms cloud 3600ms linear;
+    //animation: cloud 2000ms linear;
   }
   #chair {
     opacity: 0;
     transform: translateX(-340px);
-    animation: 1200ms fromLeft 300ms linear forwards;
+    animation: 1200ms fromLeft 3300ms linear forwards;
   }
   #ski {
     opacity: 0;
     transform: translateX(-340px);
-    animation: 1200ms fromLeft 700ms linear forwards;
+    animation: 1200ms fromLeft 3700ms linear forwards;
   }
   #plant {
     opacity: 0;
     transform: translateX(-340px);
+    animation: 2200ms plant 3850ms ease-in-out forwards;
   }
-  //position: absolute;
-  //top: 250px;
-  //left: 200px;
-  //transform-origin: center;
-
-  //path:nth-child(0){
-  //  position: absolute;
-  //  top: 0;
-  //  right: 20px;
-  //  transform: translate(30px, -70px) scale(10);
-  //}
 }
 @keyframes plant {
-  
+  25% {
+    opacity: 1;
+    transform: translateX(0px) rotateY(-40deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) rotateY(40deg);
+    transform-origin: center top;
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0px) rotateY(-30deg);
+    transform-origin: center bottom;
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0px) rotateY(30deg);
+    transform-origin: center top;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    transform-origin: center;
+  }
 }
 @keyframes fromLeft {
   to{
