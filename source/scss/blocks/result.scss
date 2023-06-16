@@ -314,7 +314,20 @@
     margin: 0;
   }
 }
-
+@keyframes resultBtn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes result-cyrcle {
+  from {
+    transform: translateX(30px) rotate(85deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
 .result__button {
   @include btn-reset;
   display: flex;
@@ -327,6 +340,8 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  opacity: 0;
+  animation: 1s resultBtn 500ms linear forwards;
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
@@ -359,7 +374,8 @@
     width: 4rem;
     height: 4rem;
     color: $c-dark;
-
+    opacity: 0;
+    animation: 1s result-cyrcle 500ms linear forwards;
     @media (min-width: $stop-scaling) {
       margin-left: 15px;
       width: 40px;
