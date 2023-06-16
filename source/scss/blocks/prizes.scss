@@ -98,10 +98,10 @@
   //margin-top: auto;
   //margin: 300px 0 0 653px;
   position: relative;
-  max-width: 500px;
-  max-height: 500px;
-
-  margin: 15% 0 15% 45%;
+  width: 300px;
+  height: 300px;
+  margin: 5% 0 15% 29%;
+  //margin: 15% 0 15% 45%;
   @media (max-width: 1750px) {
     margin: 8% auto;
   }
@@ -231,13 +231,14 @@
   &--airship {
     width: 400px;
     position: absolute;
-    top: -5%;
-    left: 40%;
+    margin: 0 auto;
+    //top: -5%;
+    //left: 40%;
     z-index: -1000;
     @media (max-width: 1750px) {
       width: 250px;
-      top: -5%;
-      left: 40%;
+      //top: -5%;
+      //left: 40%;
     }
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
