@@ -28,16 +28,7 @@
     pointer-events: auto;
   }
 }
-@keyframes lazyInput {
-  from {
-    transform: scaleX(0);
-    transform-origin: right center;
-  }
-  to {
-    transform: scaleX(1);
-    transform-origin: right center;
-  }
-}
+
 .form__field {
   flex: none;
   margin-right: 3rem;
@@ -52,7 +43,6 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
-  animation: lazyInput 2s linear;
 
   &:focus {
     border: 1px solid $c-purple;

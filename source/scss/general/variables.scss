@@ -1,17 +1,22 @@
 $c-light: #ffffff;
 $c-dark: #5f458c;
 $c-purple: #a67ee5;
+$c-blue: #3D72EE;
+$c-light-blue: #90B8E2;
 
 $font: "Proxima Nova", "Arial", sans-serif;
 $font-alt: "Radical",  "Arial", sans-serif;
 
 $stop-scaling: 2000px;
+$laptop: 1220px;
+$mac: 1660px;
 
 $wide-screen: "min-aspect-ratio: 1680/650";
 
 $wider: "min-aspect-ratio: 1441/760";
 $narrower: "max-aspect-ratio: 1439/760";
 
+$after-mobile: 769px;
 $tablet: 1024px;
 $mobile: 768px;
 

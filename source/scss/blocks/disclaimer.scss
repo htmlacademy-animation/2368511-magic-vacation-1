@@ -22,6 +22,8 @@
     text-transform: uppercase;
     font-size: 1.2rem;
     line-height: 1.2;
+    opacity: 0;
+    animation: ul-footer 800ms linear forwards;
 
     @media (min-width: $stop-scaling) {
       font-size: 12px;
@@ -88,5 +90,10 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       padding: 0.9rem 0;
     }
+  }
+}
+@keyframes ul-footer {
+  to {
+    opacity: 1;
   }
 }
