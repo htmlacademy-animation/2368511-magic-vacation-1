@@ -91,6 +91,14 @@
 }
 
 .history-sliders-color-two {
+
+  .page-header__menu{
+    a:hover {
+      color: $c-blue;
+
+
+.history-sliders-color-two {
+
   .slider__control {
     &:hover {
       color: $c-blue;
@@ -141,6 +149,9 @@
   }
 }
 .history-sliders-color-three{
+  .page-header__menu{
+    a:hover {
+      color: $c-light-blue;
   .slider__control {
     &:hover {
       color: $c-light-blue;
@@ -191,6 +202,9 @@
   }
 }
 .history-sliders-color-four{
+  .page-header__menu{
+    a:hover {
+      color: $c-dark;
   .slider__control {
     &:hover {
       color: $c-dark;
@@ -290,3 +304,6 @@
     color: white;
   }
 }
+
+}
+

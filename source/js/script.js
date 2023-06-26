@@ -27,7 +27,6 @@ titles();
 appearance();
 footerPrize();
 history();
-
 changeFon();
 
 const fullPageScroll = new FullPageScroll();
