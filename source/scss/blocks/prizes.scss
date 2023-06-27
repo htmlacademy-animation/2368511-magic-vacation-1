@@ -93,20 +93,21 @@
 }
 .prizes__list {
   @include list-reset;
-  //display: flex;
-  //justify-content: flex-end;
-  //align-items: flex-end;
-  //flex-direction: row-reverse;
-  //margin-top: auto;
-  //margin: 300px 0 0 653px;
+  padding: 0;
+  margin: 400px auto;
+  list-style: none;
   position: relative;
-  width: 300px;
+  width: 1300px;
+  max-width: 1300px;
   height: 300px;
-  margin: 5% 0 15% 29%;
-  //margin: 15% 0 15% 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   @media (max-width: 1750px) {
     margin: 8% auto;
+    width: 1075px;
   }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
     align-items: flex-start;
@@ -230,7 +231,8 @@
       }
     }
   }
-  &--airship {
+
+  &--all {
     width: 400px;
     position: absolute;
     margin: 0 auto;
@@ -435,5 +437,21 @@
       width: 0.5rem;
       height: 0.5rem;
     }
+  }
+}
+.airships {
+  animation: 1000ms airships 3000ms linear forwards;
+  @media (max-width: 1750px) {
+    animation: 1000ms airships1750 3000ms linear forwards;
+  }
+}
+@keyframes airships {
+  to {
+    transform: translateX(-400px);
+  }
+}
+@keyframes airships1750 {
+  to {
+    transform: translateX(-260px);
   }
 }

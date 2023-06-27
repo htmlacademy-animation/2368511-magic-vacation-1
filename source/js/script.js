@@ -11,6 +11,7 @@ import appearance from "./modules/appearance";
 import FullPageScroll from './modules/full-page-scroll';
 import footerPrize from './modules/prize-footer';
 import history from './modules/history';
+import titles from "./modules/titles";
 // init modules
 mobileHeight();
 slider();
@@ -23,6 +24,7 @@ social();
 appearance();
 footerPrize();
 history();
+titles();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
