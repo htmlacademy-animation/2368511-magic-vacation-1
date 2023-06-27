@@ -81,35 +81,13 @@
 
   <section class="screen screen--hidden screen--intro" id="top">
     <div class="screen__wrapper">
-      <div class="intro">
-        <div class="intro__title">
-          <div class="intro__title-up custom">
-            <span class="intro__title slowly">Т</span>
-            <span class="intro__title slowly">а</span>
-            <span class="intro__title slowly">ин</span>
-            <span class="intro__title slowly">н</span>
-            <span class="intro__title slowly">ст</span>
-            <span class="intro__title slowly">ве</span>
-            <span class="intro__title slowly">нн</span>
-            <span class="intro__title slowly">ый</span>
-          </div>
-          <div class="intro__title-down custom">
-            <span class="intro__title slowly">о</span>
-            <span class="intro__title slowly">с</span>
-            <span class="intro__title slowly">т</span>
-            <span class="intro__title slowly">р</span>
-            <span class="intro__title slowly">ов</span>
-          </div>
-        </div>
+      <div class="intro" >
+        <h2  class="intro__title" data-title="title">Таинственный остров</h2>
         <div class="intro__content">
           <div class="intro__info">
-            <p class="intro__label"><span>Даты проведения конкурса:</span> </p>
-            <p class="intro__date"><span class="intro__date--lazy">0</span> <span class="intro__date--faster">1</span>
-              <span class="intro__date--dash"> - </span>
-              <span class="intro__date--lazy">3</span>
-              <span class="intro__date--faster">1.05</span>
-              <span class="intro__date--separator"> / </span>
-              <span class="intro__date--faster">2</span> <span class="intro__date--lazy">02</span> <span class="intro__date--faster">0</span>
+            <p class="intro__label" ><span>Даты проведения конкурса:</span> </p>
+            <p class="intro__date">
+              <span class="intro__date" data-title="title">01-31.05/2020</span>
             </p>
           </div>
           <div class="intro__message">
@@ -159,13 +137,8 @@
       <div class="swiper-wrapper">
 
         <div class="slider__item swiper-slide">
-          <h2 class="slider__item-title">
-            <span class="slider__item-title slowly">И</span>
-            <span class="slider__item-title slowly">с</span>
-            <span class="slider__item-title slowly">то</span>
-            <span class="slider__item-title slowly">р</span>
-            <span class="slider__item-title slowly">и</span>
-            <span class="slider__item-title slowly">я</span>
+          <h2 class="slider__item-title" data-title="title">
+            История
           </h2>
           <p class="slider__item-text" data-slide="check"> Джеймс Таргет был основателем компании &laquo;Fjord Inc.&raquo;. С&nbsp;1965 года &laquo;Fjord Inc.&raquo; прославилась надёжными и&nbsp;удобными чемоданами и&nbsp;аксессуарами для туристов.</p>
         </div>
@@ -221,7 +194,7 @@
   <section class="screen screen--hidden screen--prizes" id="prizes">
     <div class="screen__wrapper">
       <div class="prizes">
-        <h2 class="prizes__title">ПРизы</h2>
+        <h2 class="prizes__title"  data-title="title">ПРизы</h2>
         <div class="prizes__lead">
           <p>Найди ответ и&nbsp;получи один из&nbsp;призов:</p>
         </div>
@@ -229,13 +202,13 @@
         <ul class="prizes__list">
           <li class="prizes__item prizes__item--all airships">
             <picture>
-              <img src="img/module-3/img/airship-example.svg" alt="airship">
+              <img src="img/module-3/img/airship-example.svg" alt="airship" loading="lazy">
             </picture>
           </li>
 
           <li class="prizes__item prizes__item--all">
             <picture>
-              <img src="img/module-3/img/secondary-award-from.svg" alt="suitcase">
+              <img src="img/module-3/img/secondary-award-from.svg" alt="suitcase" loading="lazy">
             </picture>
           </li>
 <!--          <li class="prizes__item prizes__item&#45;&#45;airship">-->
@@ -320,7 +293,7 @@
   <section class="screen screen--hidden screen--rules" id="rules">
     <div class="screen__wrapper">
       <div class="rules">
-        <h2 class="rules__title">Правила</h2>
+        <h2 class="rules__title" data-title="title">Правила</h2>
         <div class="rules__lead">
           <p>Для того чтобы получить наследство Джеймса Таргета, тебе нужно выведать у&nbsp;&laquo;Сони&raquo;, куда предстоит отправиться тебе в&nbsp;случае победы</p>
         </div>
@@ -359,7 +332,7 @@
     <div class="screen__wrapper">
       <div class="game">
         <div class="game__header">
-          <h2 class="game__title">Игра</h2>
+          <h2 class="game__title" data-title="title">Игра</h2>
           <div class="game__counter">
             <span>05</span>:<span>00</span>
           </div>
