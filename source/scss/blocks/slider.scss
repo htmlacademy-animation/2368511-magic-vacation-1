@@ -64,16 +64,6 @@
     }
   }
 }
-@keyframes lazyTitle  {
-  0% {
-    opacity: 0;
-    transform: translateY(108px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
 .slider__item-title {
   margin: 0 0 0 -5.5rem;
@@ -84,37 +74,7 @@
   line-height: 0.906;
   letter-spacing: -0.09em;
   overflow: hidden;
-  height: 44px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  transition: animation ease 20s;
-  animation: lazyTitle ease 3s;
-
-  span:nth-child(1) {
-    display: block;
-    animation: lazyTitle 2.4s ease-in-out;
-  }
-  span:nth-child(2) {
-    display: block;
-    animation: lazyTitle 2s ease;
-  }
-  span:nth-child(3) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
-  span:nth-child(4) {
-    display: block;
-    animation: lazyTitle 2s ease;
-  }
-  span:nth-child(5) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
-  span:nth-child(6) {
-    display: block;
-    animation: lazyTitle 2.3s ease-in-out;
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 0;
@@ -217,7 +177,23 @@
     display: none;
   }
 }
-
+@keyframes pagination {
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes pagination-svg {
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes visible {
+  to {
+    opacity: 1;
+  }
+}
 .slider__control {
   @include btn-reset;
   position: relative;
@@ -229,8 +205,37 @@
     width: 40px;
     height: 40px;
   }
+  &--prev {
+    transform: translateX(-131px);
+    opacity: 0;
+    animation: 500ms pagination 1200ms linear forwards;
+    .arrow {
+      opacity: 0;
+      transform: rotate(360deg);
+      transform-origin: center;
+      position: absolute;
+      top: 11px;
+      left: 14px;
+      animation: 500ms pagination 1200ms  linear forwards;
+    }
+  }
+  &--next {
+    transform: translateX(131px);
+    opacity: 1;
+    animation: 500ms pagination 1200ms linear forwards;
+    .arrow {
+      opacity: 0;
+      transform: rotate(-360deg);
+      transform-origin: center;
+      position: absolute;
+      top: 11px;
+      left: 14px;
+      animation: 500ms pagination-svg 1200ms linear forwards;
+    }
+  }
 
   &::before {
+    opacity: 0;
     @include center;
     content: "";
     width: 100%;
@@ -239,6 +244,7 @@
     border: 2px solid $c-light;
     border-radius: 50%;
     z-index: -1;
+    animation: 500ms visible 1200ms linear forwards;
   }
 
   svg {
@@ -288,6 +294,10 @@
     opacity: 0.5;
     pointer-events: none;
   }
+}
+.pagination-history {
+  opacity: 0;
+  animation: 500ms visible 1200ms linear forwards;
 }
 
 .slider__pagination.swiper-pagination {

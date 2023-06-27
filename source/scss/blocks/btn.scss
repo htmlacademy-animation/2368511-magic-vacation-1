@@ -7,7 +7,7 @@
   font-family: $font-alt;
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 3rem;
+  line-height: 2rem;
   color: $c-dark;
   letter-spacing: -0.04em;
 
@@ -107,4 +107,31 @@
   animation-duration: 2s;
   animation-delay: 2600ms;
   transform-origin: left;
+}
+.play {
+
+  opacity: 0;
+  animation: play 2s ease forwards;
+  animation-delay: 1200ms;
+}
+@keyframes play {
+  to {
+    opacity: 1;
+  }
+}
+.play-input{
+  animation: lazyInput 500ms linear forwards;
+  opacity: 0;
+  animation-delay: 1220ms;
+}
+@keyframes lazyInput {
+  from {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+    transform-origin: right center;
+  }
 }
