@@ -94,18 +94,19 @@
 .prizes__list {
   @include list-reset;
   padding: 0;
-  margin: 400px auto;
+  margin: 700px auto 100px auto;
   list-style: none;
   position: relative;
-  width: 1300px;
-  max-width: 1300px;
+  width: 950px;
+  max-width: 950px;
   height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   @media (max-width: 1750px) {
-    margin: 8% auto;
-    width: 1075px;
+    margin: 18% auto 3% auto;
+    width: 780px;
+    max-width: 780px;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -233,8 +234,8 @@
   }
 
   &--all {
-    width: 400px;
-    position: absolute;
+    width: 300px;
+    //position: absolute;
     margin: 0 auto;
     //top: -5%;
     //left: 40%;
@@ -439,19 +440,29 @@
     }
   }
 }
-.airships {
-  animation: 1000ms airships 3000ms linear forwards;
+.prize-2 {
+  position: absolute;
+  left: 282px;
   @media (max-width: 1750px) {
-    animation: 1000ms airships1750 3000ms linear forwards;
+    left: 232px;
+  }
+}
+.airships {
+  transition: all 0.5s linear;
+  transform: translateX(300px);
+  animation: 500ms airships 4000ms linear forwards;
+  @media (max-width: 1750px) {
+    transform: translateX(300px);
+    //animation: 200ms airships1750 4000ms linear forwards;
   }
 }
 @keyframes airships {
   to {
-    transform: translateX(-400px);
+    transform: translateX(0px);
   }
 }
 @keyframes airships1750 {
   to {
-    transform: translateX(-260px);
+    transform: translateX(0px);
   }
 }
