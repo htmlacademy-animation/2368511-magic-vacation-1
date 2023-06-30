@@ -451,8 +451,17 @@
     }
   }
 }
+@keyframes show-title {
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
+}
+
 
 .result--negative {
+
   .result__title {
     margin-top: 9.5rem;
     width: 66.5rem;
