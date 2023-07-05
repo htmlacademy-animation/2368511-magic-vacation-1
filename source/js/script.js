@@ -12,7 +12,8 @@ import FullPageScroll from './modules/full-page-scroll';
 import footerPrize from './modules/prize-footer';
 import history from './modules/history';
 import titles from "./modules/titles";
-import svgLength from './modules/svgLength'
+import svgLength from './modules/svgLength';
+import timer from './modules/timer';
 // init modules
 mobileHeight();
 slider();
@@ -26,6 +27,7 @@ appearance();
 footerPrize();
 history();
 titles();
-svgLength();
+// svgLength();
+timer();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
